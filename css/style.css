@@ -558,3 +558,36 @@ footer {
 @media (max-width: 860px) {
     .hero-grid, .about-grid-full, .contact-grid {
         grid
+
+/* Make all page headers centered */
+.page-header {
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.page-header .divider {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-header p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #555;
+}
+
+/* Ensure section headers are centered (already exists, but verify) */
+.section-header {
+    text-align: center;
+}
+
+.section-header .divider {
+    margin-left: auto;
+    margin-right: auto;
+}
