@@ -884,44 +884,46 @@ footer p {
 }
 
 /* ============================================ */
-/* COURSE IMAGES - AUTO RESIZE & OPTIMIZE */
+/* COURSE IMAGES - LARGER & MORE VISIBLE */
 /* ============================================ */
 
-/* Container for course images (main page) */
+/* Container for course images (main page) - NOW LARGER */
 .course-image {
     width: 100%;
-    height: 200px;
+    height: 280px;  /* Increased from 200px */
     overflow: hidden;
-    border-radius: 16px;
-    margin-bottom: 1rem;
-    background-color: #F0F0F0; /* Fallback background while loading */
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+    background-color: #F0F0F0;
     position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Force all images to fit perfectly */
 .course-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* This is the key! Covers the area without distortion */
-    object-position: center; /* Centers the image */
+    object-fit: cover;
+    object-position: center;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 /* Hover zoom effect */
 .course-card:hover .course-image img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
-/* Large images for courses page */
+/* Large images for courses page - NOW LARGER */
 .course-image-large {
     width: 100%;
-    height: 250px;
+    height: 380px;  /* Increased from 250px */
     overflow: hidden;
-    border-radius: 16px;
-    margin-bottom: 1.5rem;
+    border-radius: 24px;
+    margin-bottom: 2rem;
     background-color: #F0F0F0;
     position: relative;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 .course-image-large img {
@@ -930,15 +932,26 @@ footer p {
     object-fit: cover;
     object-position: center;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .course-full-card:hover .course-image-large img {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
-/* Optional: Add a subtle overlay for better text readability if needed */
-.course-image::after,
+/* Optional overlay for better visual appeal */
+.course-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0) 40%);
+    pointer-events: none;
+    border-radius: 20px;
+}
+
 .course-image-large::after {
     content: '';
     position: absolute;
@@ -946,57 +959,60 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%);
+    background: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 50%);
     pointer-events: none;
-    border-radius: 16px;
+    border-radius: 24px;
 }
 
 /* ============================================ */
-/* RESPONSIVE IMAGE SIZES FOR MOBILE */
+/* RESPONSIVE - Still large on mobile */
 /* ============================================ */
 
 /* Tablets */
 @media (max-width: 768px) {
     .course-image {
-        height: 180px;
+        height: 240px;  /* Still large on tablet */
     }
     
     .course-image-large {
-        height: 200px;
+        height: 280px;  /* Still large on tablet */
     }
 }
 
 /* Mobile phones */
 @media (max-width: 480px) {
     .course-image {
-        height: 150px;
+        height: 200px;  /* Reduced but still visible */
     }
     
     .course-image-large {
-        height: 160px;
+        height: 220px;  /* Reduced but still visible */
     }
 }
 
 /* ============================================ */
-/* EXTRA: If images are slow to load */
+/* OPTIONAL: Full-width hero image style */
 /* ============================================ */
 
-/* Lazy loading effect */
-.course-image img,
-.course-image-large img {
-    opacity: 1;
-    transition: opacity 0.3s ease;
+/* If you want one of the images to be full width like a banner */
+.course-image-full {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 24px;
+    margin-bottom: 2rem;
+    position: relative;
 }
 
-/* Optional: Blur-up effect while loading (adds class to img) */
-.course-image img.loading,
-.course-image-large img.loading {
-    filter: blur(5px);
-    opacity: 0.7;
+.course-image-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-.course-image img.loaded,
-.course-image-large img.loaded {
-    filter: blur(0);
-    opacity: 1;
+@media (max-width: 768px) {
+    .course-image-full {
+        height: 280px;
+    }
 }
