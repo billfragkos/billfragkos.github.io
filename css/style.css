@@ -890,7 +890,7 @@ footer p {
 /* Container for course images (main page) - NOW LARGER */
 .course-image {
     width: 100%;
-    height: 280px;  /* Increased from 200px */
+    height: 280px;
     overflow: hidden;
     border-radius: 20px;
     margin-bottom: 1.2rem;
@@ -899,7 +899,6 @@ footer p {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Force all images to fit perfectly */
 .course-image img {
     width: 100%;
     height: 100%;
@@ -909,7 +908,6 @@ footer p {
     transition: transform 0.4s ease;
 }
 
-/* Hover zoom effect */
 .course-card:hover .course-image img {
     transform: scale(1.08);
 }
@@ -917,7 +915,7 @@ footer p {
 /* Large images for courses page - NOW LARGER */
 .course-image-large {
     width: 100%;
-    height: 380px;  /* Increased from 250px */
+    height: 380px;
     overflow: hidden;
     border-radius: 24px;
     margin-bottom: 2rem;
@@ -939,7 +937,7 @@ footer p {
     transform: scale(1.05);
 }
 
-/* Optional overlay for better visual appeal */
+/* Overlay for better visual appeal */
 .course-image::after {
     content: '';
     position: absolute;
@@ -964,55 +962,23 @@ footer p {
     border-radius: 24px;
 }
 
-/* ============================================ */
-/* RESPONSIVE - Still large on mobile */
-/* ============================================ */
-
-/* Tablets */
+/* Responsive - Still large on mobile */
 @media (max-width: 768px) {
     .course-image {
-        height: 240px;  /* Still large on tablet */
+        height: 240px;
     }
     
     .course-image-large {
-        height: 280px;  /* Still large on tablet */
+        height: 280px;
     }
 }
 
-/* Mobile phones */
 @media (max-width: 480px) {
     .course-image {
-        height: 200px;  /* Reduced but still visible */
+        height: 200px;
     }
     
     .course-image-large {
-        height: 220px;  /* Reduced but still visible */
-    }
-}
-
-/* ============================================ */
-/* OPTIONAL: Full-width hero image style */
-/* ============================================ */
-
-/* If you want one of the images to be full width like a banner */
-.course-image-full {
-    width: 100%;
-    height: 450px;
-    overflow: hidden;
-    border-radius: 24px;
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-.course-image-full img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-@media (max-width: 768px) {
-    .course-image-full {
-        height: 280px;
+        height: 220px;
     }
 }
