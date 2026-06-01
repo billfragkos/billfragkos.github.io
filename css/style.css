@@ -1,4 +1,4 @@
-/* css/style.css - COMPLETE WORKING FILE */
+/* css/style.css - COMPLETE WORKING FILE WITH FULL VISIBLE IMAGES */
 * {
     margin: 0;
     padding: 0;
@@ -239,7 +239,7 @@ body {
 }
 
 /* ============================================ */
-/* COURSE SECTIONS - FIXED FOR BOTH PC AND PHONE */
+/* COURSE SECTIONS - FULL IMAGES VISIBLE */
 /* ============================================ */
 
 .courses-section {
@@ -247,7 +247,7 @@ body {
     background: #FFFFFF;
 }
 
-/* Desktop: 2 columns, Mobile: 1 column */
+/* Desktop: 2 columns */
 .courses-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -284,22 +284,19 @@ body {
     font-weight: 600;
 }
 
-/* IMAGE CONTAINER - FIXED */
+/* IMAGE CONTAINER - SHOWS ENTIRE 600x600 PHOTO */
 .course-image {
     width: 100%;
-    height: 300px;
-    overflow: hidden;
+    background-color: #E0E0E0;
     border-radius: 20px;
     margin-bottom: 1rem;
-    background-color: #E0E0E0;
 }
 
 .course-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    height: auto;
     display: block;
+    border-radius: 20px;
 }
 
 .course-icon i {
@@ -376,21 +373,19 @@ body {
     position: relative;
 }
 
+/* LARGE IMAGE CONTAINER - SHOWS ENTIRE 600x600 PHOTO */
 .course-image-large {
     width: 100%;
-    height: 380px;
-    overflow: hidden;
+    background-color: #E0E0E0;
     border-radius: 20px;
     margin-bottom: 1.5rem;
-    background-color: #E0E0E0;
 }
 
 .course-image-large img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    height: auto;
     display: block;
+    border-radius: 20px;
 }
 
 .course-header {
@@ -624,15 +619,6 @@ footer {
         grid-template-columns: 1fr;
     }
     
-    /* Smaller images on phone */
-    .course-image {
-        height: 220px;
-    }
-    
-    .course-image-large {
-        height: 250px;
-    }
-    
     /* Hamburger menu */
     .nav-links {
         position: fixed;
@@ -674,14 +660,6 @@ footer {
         font-size: 1.6rem;
     }
     
-    .course-image {
-        height: 180px;
-    }
-    
-    .course-image-large {
-        height: 200px;
-    }
-    
     .course-card h3 {
         font-size: 1.3rem;
     }
@@ -695,14 +673,6 @@ footer {
 @media (min-width: 769px) and (max-width: 1024px) {
     .courses-grid {
         gap: 1.5rem;
-    }
-    
-    .course-image {
-        height: 260px;
-    }
-    
-    .course-image-large {
-        height: 320px;
     }
 }
 
