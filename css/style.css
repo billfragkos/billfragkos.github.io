@@ -1,4 +1,4 @@
-/* css/style.css - Fully Responsive with Mobile Optimizations */
+/* css/style.css - COMPLETE WORKING FILE */
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ body {
     padding: 0 1.5rem;
 }
 
-/* Navigation - Black & White */
+/* Navigation */
 .navbar {
     position: sticky;
     top: 0;
@@ -39,7 +39,6 @@ body {
     font-size: 1.4rem;
     font-weight: 800;
     color: #000000;
-    letter-spacing: -0.5px;
     text-decoration: none;
 }
 
@@ -74,10 +73,9 @@ body {
     width: 28px;
     height: 2.5px;
     background: #000000;
-    transition: 0.3s;
 }
 
-/* Hero Section - Mobile Optimized */
+/* Hero Section */
 .hero {
     padding: 3rem 0 2.5rem;
     background: #F8F8F8;
@@ -119,7 +117,6 @@ body {
     font-size: 1rem;
     color: #444444;
     margin-bottom: 1.5rem;
-    max-width: 100%;
 }
 
 .btn-primary {
@@ -135,12 +132,10 @@ body {
     gap: 8px;
     border: none;
     cursor: pointer;
-    font-size: 0.9rem;
 }
 
 .btn-primary:hover {
     background: #333333;
-    transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -155,7 +150,6 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.9rem;
 }
 
 .btn-outline:hover {
@@ -173,7 +167,6 @@ body {
 .hero-stats {
     display: flex;
     gap: 1.5rem;
-    margin-top: 0.5rem;
     flex-wrap: wrap;
 }
 
@@ -204,7 +197,6 @@ body {
 .floating-piece {
     font-size: 4rem;
     animation: float 4s infinite;
-    filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.2));
 }
 
 @keyframes float {
@@ -213,7 +205,7 @@ body {
     100% { transform: translateY(0px); }
 }
 
-/* Section Header - Centered */
+/* Section Headers */
 .section-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -232,16 +224,7 @@ body {
     margin: 0.6rem auto;
 }
 
-.section-header p {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #555555;
-    font-size: 0.95rem;
-    padding: 0 1rem;
-}
-
-/* Page Headers for Courses, About, Contact - Centered */
+/* Page Headers */
 .page-header {
     background: #F8F8F8;
     padding: 2.5rem 0 2rem;
@@ -255,41 +238,33 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.page-header .divider {
-    margin-left: auto;
-    margin-right: auto;
-}
+/* ============================================ */
+/* COURSE SECTIONS - FIXED FOR BOTH PC AND PHONE */
+/* ============================================ */
 
-.page-header p {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #555555;
-    font-size: 0.95rem;
-    padding: 0 1rem;
-}
-
-/* Courses Grid on Main Page - Mobile Optimized */
 .courses-section {
     padding: 3rem 0;
     background: #FFFFFF;
 }
 
+/* Desktop: 2 columns, Mobile: 1 column */
 .courses-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    max-width: 900px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Course Card */
 .course-card {
     background: #F8F8F8;
     border: 1px solid #E0E0E0;
-    border-radius: 20px;
+    border-radius: 24px;
     padding: 1.5rem;
-    transition: transform 0.2s;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .course-card.featured {
@@ -309,31 +284,51 @@ body {
     font-weight: 600;
 }
 
+/* IMAGE CONTAINER - FIXED */
+.course-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    background-color: #E0E0E0;
+}
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
 .course-icon i {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #000000;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
 }
 
 .course-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 0.8rem;
+    color: #000000;
 }
 
 .course-card p {
     font-size: 0.9rem;
     color: #555;
+    margin-bottom: 1rem;
 }
 
 .course-features {
     list-style: none;
-    margin: 1.2rem 0;
+    margin: 1rem 0;
     text-align: left;
-    display: inline-block;
+    padding-left: 1rem;
 }
 
 .course-features li {
-    margin: 0.5rem 0;
+    margin: 0.4rem 0;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -342,7 +337,7 @@ body {
 
 .course-features i {
     color: #000000;
-    font-size: 0.8rem;
+    width: 18px;
 }
 
 .card-link {
@@ -350,22 +345,109 @@ body {
     text-decoration: none;
     font-weight: 600;
     color: #000000;
-    border-bottom: 1px solid #000;
-    margin-top: 0.8rem;
+    border-bottom: 2px solid #000;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+/* Courses Detailed Page */
+.courses-detailed {
+    padding: 3rem 0;
+}
+
+.courses-full-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.course-full-card {
+    background: #F8F8F8;
+    border: 1px solid #E0E0E0;
+    border-radius: 24px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-full-card.featured {
+    border: 2px solid #000000;
+    position: relative;
+}
+
+.course-image-large {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    background-color: #E0E0E0;
+}
+
+.course-image-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.course-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.course-header i {
+    font-size: 2rem;
+    color: #000000;
+}
+
+.course-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.course-full-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.course-full-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.course-full-card ul {
+    margin: 0.5rem 0 1rem;
+    padding-left: 1.2rem;
+}
+
+.course-full-card li {
+    margin: 0.3rem 0;
     font-size: 0.9rem;
 }
 
-/* Teaching Methods - Mobile Optimized */
+.course-note {
+    text-align: center;
+    background: #F8F8F8;
+    padding: 0.8rem;
+    border-radius: 50px;
+    border: 1px solid #E0E0E0;
+    margin-top: 1.5rem;
+}
+
+/* Teaching Methods */
 .teaching-methods {
     padding: 3rem 0;
     background: #F8F8F8;
-    border-top: 1px solid #E0E0E0;
-    border-bottom: 1px solid #E0E0E0;
 }
 
 .methods-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
 
@@ -383,97 +465,15 @@ body {
     margin-bottom: 0.8rem;
 }
 
-.method-card h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.method-card p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* Courses Detailed Page - Mobile Optimized */
-.courses-detailed {
-    padding: 2.5rem 0;
-}
-
-.courses-full-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.course-full-card {
-    background: #F8F8F8;
-    border: 1px solid #E0E0E0;
-    border-radius: 20px;
-    padding: 1.5rem;
-}
-
-.course-full-card.featured {
-    border: 2px solid #000000;
-    position: relative;
-}
-
-.course-header {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-}
-
-.course-header i {
-    font-size: 2rem;
-    color: #000000;
-}
-
-.course-header h2 {
-    font-size: 1.4rem;
-}
-
-.course-full-card p {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-.course-full-card h3 {
-    margin: 1rem 0 0.5rem;
-    font-size: 1.1rem;
-}
-
-.course-full-card ul {
-    margin: 0.8rem 0 1.2rem;
-    padding-left: 1.2rem;
-}
-
-.course-full-card li {
-    margin: 0.4rem 0;
-    font-size: 0.85rem;
-}
-
-.course-note {
-    text-align: center;
-    background: #F8F8F8;
-    padding: 0.8rem;
-    border-radius: 50px;
-    border: 1px solid #E0E0E0;
-    margin-top: 1.5rem;
-    font-size: 0.85rem;
-}
-
-/* About Page - Mobile Optimized */
+/* About Page */
 .about-page {
-    padding: 2.5rem 0;
+    padding: 3rem 0;
 }
 
 .about-grid-full {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 2rem;
-    align-items: start;
 }
 
 .portrait-placeholder {
@@ -485,82 +485,44 @@ body {
 }
 
 .portrait-placeholder i {
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: #000;
     display: block;
-    margin-bottom: 0.8rem;
-}
-
-.portrait-placeholder span {
-    font-size: 1rem;
-    font-weight: 600;
 }
 
 .about-bio h2 {
-    margin: 1.2rem 0 0.6rem;
+    margin: 1rem 0 0.5rem;
     font-size: 1.3rem;
-    color: #000;
-}
-
-.about-bio h2:first-of-type {
-    margin-top: 0;
-}
-
-.about-bio p {
-    font-size: 0.9rem;
-    margin-bottom: 0.8rem;
-    color: #444;
 }
 
 .achievements-list {
     list-style: none;
-    margin: 0.8rem 0;
+    margin: 1rem 0;
 }
 
 .achievements-list li {
-    margin: 0.6rem 0;
+    margin: 0.5rem 0;
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 0.9rem;
 }
 
-.achievements-list i {
-    width: 24px;
-    color: #000000;
-    font-size: 1rem;
-}
-
-/* Contact Page - Mobile Optimized */
+/* Contact Page */
 .contact-page {
-    padding: 2.5rem 0;
+    padding: 3rem 0;
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
-}
-
-.contact-info-detailed h2 {
-    font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-}
-
-.contact-info-detailed p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.contact-methods {
-    margin: 1.5rem 0;
 }
 
 .contact-method {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .contact-method i {
@@ -569,40 +531,22 @@ body {
     color: #000000;
 }
 
-.contact-method h3 {
-    font-size: 1rem;
-    margin-bottom: 0.2rem;
-}
-
-.contact-method a, .contact-method span {
-    font-size: 0.85rem;
-    color: #333;
-    text-decoration: none;
-}
-
 .platform-links {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    margin: 1.2rem 0;
+    margin: 1rem 0;
 }
 
 .platform-btn {
     background: #F0F0F0;
     border: 1px solid #000000;
-    padding: 0.7rem 1rem;
+    padding: 0.7rem;
     text-decoration: none;
     color: #000000;
     font-weight: 600;
     text-align: center;
     border-radius: 50px;
-    transition: 0.2s;
-    font-size: 0.85rem;
-}
-
-.platform-btn:hover {
-    background: #000000;
-    color: #FFFFFF;
 }
 
 .availability {
@@ -612,29 +556,14 @@ body {
     border-radius: 16px;
 }
 
-.availability h3 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.availability p {
-    font-size: 0.85rem;
-}
-
 .contact-form-detailed {
     background: #F8F8F8;
     padding: 1.5rem;
     border-radius: 20px;
-    border: 1px solid #E0E0E0;
-}
-
-.contact-form-detailed h2 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
 }
 
 .form-group {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 .form-group input, .form-group select, .form-group textarea {
@@ -643,18 +572,9 @@ body {
     border: 1px solid #CCCCCC;
     border-radius: 12px;
     font-family: inherit;
-    background: #FFFFFF;
-    font-size: 0.9rem;
 }
 
-.form-note {
-    font-size: 0.75rem;
-    color: #666;
-    margin-top: 0.8rem;
-    text-align: center;
-}
-
-/* Footer - Mobile Optimized */
+/* Footer */
 footer {
     background: #000000;
     color: #CCCCCC;
@@ -669,30 +589,51 @@ footer {
     color: #FFFFFF;
 }
 
-footer p {
-    font-size: 0.8rem;
-    margin-bottom: 0.5rem;
-}
-
-.footer-links a {
-    color: #AAAAAA;
-    text-decoration: none;
-    margin: 0 0.3rem;
-    font-size: 0.8rem;
-}
-
-.footer-links a:hover {
-    color: #FFFFFF;
-}
-
 /* ============================================ */
-/* MOBILE MENU - HAMBURGER ACTIVATION */
+/* RESPONSIVE - FIXED FOR ALL DEVICES */
 /* ============================================ */
+
+/* Mobile phones - 1 column layout */
 @media (max-width: 768px) {
     .container {
-        padding: 0 1.2rem;
+        padding: 0 1rem;
     }
     
+    /* Make courses 1 column on phone */
+    .courses-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .courses-full-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .about-grid-full {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .methods-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Smaller images on phone */
+    .course-image {
+        height: 220px;
+    }
+    
+    .course-image-large {
+        height: 250px;
+    }
+    
+    /* Hamburger menu */
     .nav-links {
         position: fixed;
         top: 60px;
@@ -701,10 +642,10 @@ footer p {
         width: 100%;
         flex-direction: column;
         padding: 1.5rem;
-        transition: 0.3s ease-in-out;
+        transition: 0.3s;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         border-bottom: 2px solid #000;
-        gap: 1.2rem;
+        gap: 1rem;
         z-index: 99;
     }
     
@@ -716,240 +657,63 @@ footer p {
         display: flex;
     }
     
-    /* Hamburger animation when open */
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-}
-
-/* Extra small devices (phones under 480px) */
-@media (max-width: 480px) {
-    .container {
-        padding: 0 1rem;
-    }
-    
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-    
     .hero-buttons {
         flex-direction: column;
-        width: 100%;
     }
     
     .hero-buttons .btn-primary,
     .hero-buttons .btn-outline {
-        text-align: center;
         justify-content: center;
         width: 100%;
-    }
-    
-    .section-header h2 {
-        font-size: 1.5rem;
-    }
-    
-    .page-header h1 {
-        font-size: 1.8rem;
-    }
-    
-    .course-card h3 {
-        font-size: 1.2rem;
-    }
-    
-    .hero-stats {
-        justify-content: space-between;
-    }
-    
-    .hero-stats div {
-        font-size: 0.8rem;
-    }
-    
-    .hero-stats span {
-        font-size: 1.1rem;
-    }
-}
-
-/* Tablets (portrait) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .courses-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-    
-    .methods-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .courses-full-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .about-grid-full {
-        grid-template-columns: 1fr 1.5fr;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-/* Desktop/Laptop */
-@media (min-width: 1025px) {
-    .courses-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    
-    .methods-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    
-    .courses-full-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    
-    .about-grid-full {
-        grid-template-columns: 1fr 2fr;
-        gap: 3rem;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-    }
-    
-    .hero-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-    }
-}
-
-/* ============================================ */
-/* COURSE IMAGES - OPTIMIZED FOR 600x600 PHOTOS */
-/* ============================================ */
-
-/* Course image containers - Main page */
-.course-image {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1; /* Makes square container for 600x600 photos */
-    overflow: hidden;
-    border-radius: 20px;
-    margin-bottom: 1.2rem;
-    background-color: #F0F0F0;
-}
-
-.course-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.course-card:hover .course-image img {
-    transform: scale(1.05);
-}
-
-/* Course image containers - Courses page (large) */
-.course-image-large {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1; /* Square for 600x600 photos */
-    overflow: hidden;
-    border-radius: 24px;
-    margin-bottom: 1.5rem;
-    background-color: #F0F0F0;
-}
-
-.course-image-large img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.course-full-card:hover .course-image-large img {
-    transform: scale(1.03);
-}
-
-/* ============================================ */
-/* RESPONSIVE IMAGE SIZES FOR ALL DEVICES */
-/* ============================================ */
-
-/* Desktop - images look great */
-@media (min-width: 1025px) {
-    .course-image {
-        max-height: 350px;
-    }
-    .course-image-large {
-        max-height: 450px;
-    }
-}
-
-/* Tablets */
-@media (max-width: 1024px) and (min-width: 769px) {
-    .course-image {
-        max-height: 280px;
-    }
-    .course-image-large {
-        max-height: 350px;
-    }
-}
-
-/* Mobile phones */
-@media (max-width: 768px) {
-    .course-image {
-        max-height: 250px;
-    }
-    .course-image-large {
-        max-height: 300px;
     }
 }
 
 /* Small phones */
 @media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+    
     .course-image {
-        max-height: 200px;
+        height: 180px;
     }
+    
     .course-image-large {
-        max-height: 250px;
+        height: 200px;
+    }
+    
+    .course-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
     }
 }
 
-/* ============================================ */
-/* ENSURE COURSE CARDS ARE TALL ENOUGH FOR IMAGES */
-/* ============================================ */
-
-.course-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .courses-grid {
+        gap: 1.5rem;
+    }
+    
+    .course-image {
+        height: 260px;
+    }
+    
+    .course-image-large {
+        height: 320px;
+    }
 }
 
-.course-card .card-link {
-    margin-top: auto;
-}
-
-.course-full-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.course-full-card .btn-primary {
-    margin-top: auto;
-    align-self: flex-start;
+/* Desktop */
+@media (min-width: 1025px) {
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
 }
